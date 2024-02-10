@@ -15,11 +15,38 @@
 <body>
     <div id="map">    </div>
     <script>
-        var map = L.map('map').setView([0,0],1);
+        var map = L.map('map').setView([51.5,-0.09],13);
         L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=9fmCrHWeAxikTj7LEmUA',{
             maxZoom: 18,
         }).addTo(map);
-        var marker = L.marker([51.5, -0.09]).addTo(map);
+
+        var leafletIcon = L.icon({
+            iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-green.png',
+            shadowUrl: 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png',
+            iconSize: [38, 95],
+            shadowSize: [50, 64],
+            iconAnchor: [22, 94],
+            shadowAnchor: [4, 62],
+            popupAnchor: [-3, -76]
+        });
+
+        var marker = L.marker([51.5, -0.09], {icon:leafletIcon}).addTo(map);
+
+        var circle = L.circle([51.508, -0.11], {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(map);
+        var polygon = L.polygon([
+            [51.509, -0.08],
+            [51.503, -0.06],
+            [51.51, -0.047]
+        ]).addTo(map);
+
+        marker.bindPopup("<b>Hello London.</b><br>  I am a popup.").openPopup();
+        circle.bindPopup("I am a circle.").openPopup();
+        polygon.bindPopup("I am a polygon.");
     </script>
     
 </body>
