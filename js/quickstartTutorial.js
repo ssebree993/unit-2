@@ -2,13 +2,12 @@
 
 var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
-//add tile layer...Have my own key; what is your.mapbox.project.id?
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={pk.eyJ1Ijoic2tzZWJyZWUiLCJhIjoiY2xzaTNmbGJ5MmR5dTJrbzZiems0Zm4yZCJ9.-wktxrXM5TNNPQh1uJKsfA}', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox://styles/sksebree/clg1mlktf000701mny0p5rvox',
-    accessToken: 'pk.eyJ1Ijoic2tzZWJyZWUiLCJhIjoiY2xzaTNmbGJ5MmR5dTJrbzZiems0Zm4yZCJ9.-wktxrXM5TNNPQh1uJKsfA'
-}).addTo(mymap);
+//add tile layer...Switched to OpenStreetMap Mapbox wasn't working
+      // add the OpenStreetMap tiles
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+     maxZoom: 19,
+    attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+    }).addTo(map);
 
 var marker = L.marker([51.5, -0.09]).addTo(mymap);
 
