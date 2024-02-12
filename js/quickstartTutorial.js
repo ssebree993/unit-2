@@ -1,13 +1,14 @@
-// Initialize and add the map
+/* Example from Leaflet Quick Start Guide*/
 
 var mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
-//add tile layer...Switched to OpenStreetMap Mapbox wasn't working
-      // add the OpenStreetMap tiles
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-     maxZoom: 19,
-    attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-    }).addTo(map);
+//add tile layer...replace project id and accessToken with your own
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+    id: 'your.mapbox.project.id',
+    accessToken: 'your.mapbox.public.access.token'
+}).addTo(mymap);
 
 var marker = L.marker([51.5, -0.09]).addTo(mymap);
 
@@ -42,3 +43,6 @@ function onMapClick(e) {
 }
 
 mymap.on('click', onMapClick);
+
+document.addEventListener('DOMContentLoaded',createMap)
+

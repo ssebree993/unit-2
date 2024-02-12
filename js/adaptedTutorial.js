@@ -1,44 +1,34 @@
-// Initialize and add the map
+/* Map of GeoJSON data from MegaCities.geojson */
+//declare map var in global scope
+var map;
+//function to instantiate the Leaflet map
+function createMap(){
+    //create the map
+    map = L.map('map', {
+        center: [20, 0],
+        zoom: 2
+    });
 
-var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-
-//add tile layer...Switched to OpenStreetMap Mapbox wasn't working
-      // add the OpenStreetMap tiles
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-     maxZoom: 19,
-    attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+    //add OSM base tilelayer
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
     }).addTo(map);
 
-var marker = L.marker([51.5, -0.09]).addTo(mymap);
+    //call getData function
+    getData();
+};
 
-var circle = L.circle([51.508, -0.11], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,    radius: 500
-}).addTo(mymap);
+//function to retrieve the data and place it on the map
+function getData(){
+    //load the data
+    fetch("data/MegaCities.geojson")
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(json){
+            //create a Leaflet GeoJSON layer and add it to the map
+            L.geoJson(json).addTo(map);
+        })
+};
 
-var polygon = L.polygon([
-    [51.509, -0.08],
-    [51.503, -0.06],
-    [51.51, -0.047]
-]).addTo(mymap);
-
-marker.bindPopup("<strong>Hello world!</strong><br />I am a popup.").openPopup();
-circle.bindPopup("I am a circle.");
-polygon.bindPopup("I am a polygon.");
-
-var popup = L.popup()
-    .setLatLng([51.5, -0.09])
-    .setContent("I am a standalone popup.")
-    .openOn(mymap);
-
-var popup = L.popup();
-
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(mymap);
-}
-
-mymap.on('click', onMapClick);
+document.addEventListener('DOMContentLoaded',createMap)
