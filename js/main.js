@@ -15,8 +15,8 @@ L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=9fmCrH
 
   // load GeoJSON from an external file
 
-  $.getJSON("NETorn.geojson",function(data){
-    // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
-  });
+var myGeoJson =
+"type": "FeatureCollection",
+"name": "data/NETorn1980.geojson" });
+var myLayer = L.geoJSON(myGeoJson).addTo(map);
  
