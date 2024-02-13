@@ -1,0 +1,395 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 0,
+          "om": 358,
+          "yr": 1980,
+          "mo": 5,
+          "dy": 29,
+          "date": "5/29/1980",
+          "time": "18:35:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 5,
+          "mag": 1,
+          "inj": 0,
+          "fat": 0,
+          "loss": 3
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -97.48,
+            40.48
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 1,
+          "om": 362,
+          "yr": 1980,
+          "mo": 5,
+          "dy": 29,
+          "date": "5/29/1980",
+          "time": "19:25:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 6,
+          "mag": 1,
+          "inj": 2,
+          "fat": 0,
+          "loss": 6
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -97.02,
+            41.23
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 2,
+          "om": 366,
+          "yr": 1980,
+          "mo": 5,
+          "dy": 29,
+          "date": "5/29/1980",
+          "time": "19:40:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 7,
+          "mag": 0,
+          "inj": 0,
+          "fat": 0,
+          "loss": 0
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -97.48,
+            40.48
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 3,
+          "om": 367,
+          "yr": 1980,
+          "mo": 5,
+          "dy": 29,
+          "date": "5/29/1980",
+          "time": "19:45:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 8,
+          "mag": 1,
+          "inj": 0,
+          "fat": 0,
+          "loss": 5
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -97.6,
+            40.17
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 4,
+          "om": 546,
+          "yr": 1980,
+          "mo": 6,
+          "dy": 14,
+          "date": "6/14/1980",
+          "time": "20:10:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 24,
+          "mag": 0,
+          "inj": 0,
+          "fat": 0,
+          "loss": 0
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -97.57,
+            41.67
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 5,
+          "om": 407,
+          "yr": 1980,
+          "mo": 6,
+          "dy": 2,
+          "date": "6/2/1980",
+          "time": "3:30:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 11,
+          "mag": 2,
+          "inj": 0,
+          "fat": 0,
+          "loss": 4
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -97.6,
+            40.23
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 6,
+          "om": 429,
+          "yr": 1980,
+          "mo": 6,
+          "dy": 3,
+          "date": "6/3/1980",
+          "time": "19:45:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 12,
+          "mag": 3,
+          "inj": 25,
+          "fat": 1,
+          "loss": 6
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.4,
+            41.02
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 7,
+          "om": 430,
+          "yr": 1980,
+          "mo": 6,
+          "dy": 3,
+          "date": "6/3/1980",
+          "time": "20:00:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 13,
+          "mag": 1,
+          "inj": 5,
+          "fat": 0,
+          "loss": 4
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.37,
+            40.95
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 8,
+          "om": 431,
+          "yr": 1980,
+          "mo": 6,
+          "dy": 3,
+          "date": "6/3/1980",
+          "time": "20:05:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 14,
+          "mag": 3,
+          "inj": 40,
+          "fat": 1,
+          "loss": 7
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.35,
+            40.97
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 9,
+          "om": 432,
+          "yr": 1980,
+          "mo": 6,
+          "dy": 3,
+          "date": "6/3/1980",
+          "time": "20:46:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 15,
+          "mag": 1,
+          "inj": 0,
+          "fat": 0,
+          "loss": 4
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.3,
+            40.88
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 10,
+          "om": 433,
+          "yr": 1980,
+          "mo": 6,
+          "dy": 3,
+          "date": "6/3/1980",
+          "time": "21:16:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 16,
+          "mag": 4,
+          "inj": 110,
+          "fat": 3,
+          "loss": 8
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.3,
+            40.92
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 11,
+          "om": 434,
+          "yr": 1980,
+          "mo": 6,
+          "dy": 3,
+          "date": "6/3/1980",
+          "time": "21:25:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 17,
+          "mag": 2,
+          "inj": 18,
+          "fat": 0,
+          "loss": 6
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.28,
+            40.9
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 12,
+          "om": 435,
+          "yr": 1980,
+          "mo": 6,
+          "dy": 3,
+          "date": "6/3/1980",
+          "time": "22:00:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 18,
+          "mag": 1,
+          "inj": 2,
+          "fat": 0,
+          "loss": 6
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.28,
+            40.83
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 13,
+          "om": 621,
+          "yr": 1980,
+          "mo": 7,
+          "dy": 4,
+          "date": "7/4/1980",
+          "time": "11:45:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 27,
+          "mag": 0,
+          "inj": 0,
+          "fat": 0,
+          "loss": 2
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -97.43,
+            40.7
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "FID": 14,
+          "om": 757,
+          "yr": 1980,
+          "mo": 8,
+          "dy": 10,
+          "date": "8/10/1980",
+          "time": "21:35:00",
+          "st": "NE",
+          "stf": 31,
+          "stn": 30,
+          "mag": 1,
+          "inj": 0,
+          "fat": 0,
+          "loss": 5
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -98.42,
+            40.87
+          ]
+        }
+      }
+    ]
+  }
