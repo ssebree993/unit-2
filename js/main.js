@@ -13,10 +13,19 @@ L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=9fmCrH
   crossOrigin: true
 }).addTo(map);
 
-  // load GeoJSON from an external file
-
-var myGeoJson =
-"type": "FeatureCollection",
-"name": "data/NETorn1980.geojson" });
-var myLayer = L.geoJSON(myGeoJson).addTo(map);
+//call the getData function
+//function to retrieve the data and place it on the map
+function getData(map){
+    //load the data
+    fetch("data/MegaCities.geojson")
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(json){
+            //create a Leaflet GeoJSON layer and add it to the map
+            L.geoJson(json, {
+                onEachFeature: onEachFeature
+            }).addTo(map);
+        })  
+};
  
