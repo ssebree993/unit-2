@@ -1,17 +1,23 @@
-//initialize the map
+//declare map variable globally so all functions have access
+var map;
 
-var map = L.map('map').setView([41, -99.0], 8);
+//function to instantiate the Leaflet map
+function createMap(){
 
-//add tile layer replace with your own
-const key = 'YOUR_MAPTILER_API_KEY_HERE';
-const map = L.map('map').setView([41,--99], 8); //starting position
-L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=9fmCrHWeAxikTj7LEmUA',{ //style URL
-  tileSize: 512,
-  zoomOffset: -1,
-  minZoom: 1,
-  attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
-  crossOrigin: true
-}).addTo(map);
+    //create the map
+    map = L.map('map', {
+        center: [42, -99],
+        zoom: 8
+    });
+
+    //add OSM base tilelayer
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+    }).addTo(map);
+
+    //call getData function
+    getData(map);
+};
 
 //call the getData function
 //function to retrieve the data and place it on the map
@@ -28,4 +34,4 @@ function getData(map){
             }).addTo(map);
         })  
 };
- 
+document.addEventListener('DOMContentLoaded',createMap)

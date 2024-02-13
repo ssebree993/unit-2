@@ -6,8 +6,8 @@ function createMap(){
 
     //create the map
     map = L.map('map', {
-        center: [0, 0],
-        zoom: 2
+        center: [41.5, -99.5],
+        zoom: 8
     });
 
     //add OSM base tilelayer
@@ -21,7 +21,7 @@ function createMap(){
 
 //function to retrieve the data and place it on the map
 function getData(map){
-    fetch("data/short.geojson")
+    fetch("data/NETorn1980.geojson")
 		.then(function(response){
 			return response.json();
 		})
