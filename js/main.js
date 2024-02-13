@@ -17,7 +17,7 @@ L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=9fmCrH
 //function to retrieve the data and place it on the map
 function getData(map){
     //load the data
-    fetch("data/MegaCities.geojson")
+    fetch("data/NETorn1980.geojson")
         .then(function(response){
             return response.json();
         })
