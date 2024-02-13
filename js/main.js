@@ -1,33 +1,21 @@
-var map = L.map('map').setView([51.505, -0.09], 13);
+//initialize the map
+
+var map = L.map('map').setView([41, -99.0], 8);
 
 //add tile layer replace with your own
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+const key = 'YOUR_MAPTILER_API_KEY_HERE';
+const map = L.map('map').setView([41,--99], 8); //starting position
+L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=9fmCrHWeAxikTj7LEmUA',{ //style URL
+  tileSize: 512,
+  zoomOffset: -1,
+  minZoom: 1,
+  attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+  crossOrigin: true
 }).addTo(map);
 
-var marker = L.marker([51.5, -0.09]).addTo(map);
-var circle = L.circle([51.508, -0.11], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 500
-}).addTo(map);
-var polygon = L.polygon([
-    [51.509, -0.08],
-    [51.503, -0.06],
-    [51.51, -0.047]
-]).addTo(map);
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-circle.bindPopup("I am a circle.");
-polygon.bindPopup("I am a polygon.");
-var popup = L.popup();
-
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(map);
-}
-
-map.on('click', onMapClick);
+  // load GeoJSON from an external file
+  $.getJSON("data/NETorn1980.geojson",function(data){
+    // add GeoJSON layer to the map once the file is loaded
+    L.geoJson(data).addTo(map);
+  });
+ 

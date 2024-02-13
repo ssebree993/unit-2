@@ -12,6 +12,7 @@
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin="">
+        <script src="jquery-3.7.1.js"></script> 
         </script>
         
     </head>
@@ -21,10 +22,14 @@
 
     <body>
         <div id="map"></div>
-<script>
+        <script>
+            var map = L.map('map').setView([41.0,-99.0],9);
+            L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=9fmCrHWeAxikTj7LEmUA',{
+                maxZoom: 18,
+            }).addTo(map);
+        </script>
 
-</script>
 
-        <script type="text/javascript" src="js/geojsonTutorial.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
