@@ -1,0 +1,27 @@
+var geojsonFeature = 
+{
+    "type": "Feature",
+    "properties": {
+      "FID": 0,
+      "om": 358,
+      "yr": 1980,
+      "mo": 5,
+      "dy": 29,
+      "date": "5/29/1980",
+      "time": "18:35:00",
+      "st": "NE",
+      "stf": 31,
+      "stn": 5,
+      "mag": 1,
+      "inj": 0,
+      "fat": 0,
+      "loss": 3
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -97.48,
+        40.48
+      ]
+    }
+  };
