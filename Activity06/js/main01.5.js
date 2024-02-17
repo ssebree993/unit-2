@@ -1,16 +1,15 @@
-// Step 1. Create the leaflet map + global variable
+//declare map variable globally so all functions have access
 var map;
 var minValue;
 
-//Step 1: CREATE THE MAP
+//step 1 create map
 function createMap(){
+
     //create the map
     map = L.map('map', {
         center: [0, 0],
         zoom: 2
     });
-// refresh/reload the map to avoid the 404
-//map.reload();
 
     //add OSM base tilelayer
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -20,15 +19,16 @@ function createMap(){
     //call getData function
     getData(map);
 };
+
 function calculateMinValue(data){
     //create empty array to store all data values
     var allValues = [];
     //loop through each city
     for(var city of data.features){
         //loop through each year
-        for(var year = 1985; year <= 2015; year+=5){        // Change variable ************************
+        for(var year = 1985; year <= 2015; year+=5){
               //get population for current year
-              var value = city.properties["Pop_"+ String(year)];  // Change variable ************************
+              var value = city.properties["Pop_"+ String(year)];
               //add value to array
               allValues.push(value);
         }
@@ -37,7 +37,7 @@ function calculateMinValue(data){
     var minValue = Math.min(...allValues)
 
     return minValue;
-}                           // WHY NO SEMICOLON HERE? ************************
+}
 
 //calculate the radius of each proportional symbol
 function calcPropRadius(attValue) {
@@ -53,7 +53,7 @@ function calcPropRadius(attValue) {
 function createPropSymbols(data){
 
     //Step 4: Determine which attribute to visualize with proportional symbols
-    var attribute = "Pop_2015";    // Change variable ************************
+    var attribute = "Pop_2015";
 
     //create marker options
     var geojsonMarkerOptions = {
@@ -83,7 +83,7 @@ function createPropSymbols(data){
 //Step 2: Import GeoJSON data
 function getData(){
     //load the data
-    fetch("data/MegaCities.geojson")  // Change variable ************************
+    fetch("data/MegaCities.geojson")
         .then(function(response){
             return response.json();
         })
