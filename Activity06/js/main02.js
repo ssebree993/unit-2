@@ -9,6 +9,8 @@ function createMap(){
         center: [0, 0],
         zoom: 2
     });
+// refresh/reload the map to avoid the 404
+//map.reload();
 
     //add OSM base tilelayer
     L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
