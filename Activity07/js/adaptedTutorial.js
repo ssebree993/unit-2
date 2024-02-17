@@ -45,3 +45,7 @@ function getData(map){
 };
 
 document.addEventListener('DOMContentLoaded',createMap)
+
+
+
+
