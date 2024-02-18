@@ -13,25 +13,34 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin="">
         </script>
-        <link rel="stylesheet" href="css/leaflet.css">             
+        <link rel="stylesheet" href="css/leaflet.css"/>             
     </head>
-    <style> 
+<!-- style css script reference is not connecting to folder but works here-->
+<style>
+    #map {
+        width: 80%;
+        height: 500px;
+        display: inline-block;
+    }
+    #panel {    
+        width: 16%;    
+        padding: 20px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        line-height: 42px;
+    } 
+</style>
 
-   #map {    
-    height: 400px;    
-    width: 80%;
-    display: inline-block;
-    }   
-    <link rel="stylesheet" href="css/style.css"> 
-    </style>
+<link rel="stylesheet" type="text/css" href="style.css" />
 
-    <body>
-        <div id="map"></div>
-        <div id="panel"></div>
+<body>
+    <div id="map"></div>
+    <div id="panel"></div>
 
-        <script type="text/javascript" src="js/leaflet.js"></script>
-        <script type="text/javascript" src="js/main02.1.js"></script>
-        <script type="text/javascript" src="js/example3.5.js"></script>
-       
-    </body>
+    <script type="text/javascript" src="js/leaflet.js"></script>
+    <script type="text/javascript" src="js/main02.1.js"></script>
+    <script type="text/javascript" src="js/example3.10.js"></script>
+   
+</body>
 </html>
