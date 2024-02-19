@@ -3,6 +3,7 @@ var map;
 var minValue;
 
 function createMap(){
+
     //create the map
     map = L.map('map', {
         center: [0, 0],
@@ -128,14 +129,36 @@ function createSequenceControls(){
     document.querySelector(".range-slider").step = 1;
 
     //add step buttons
-    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="reverse">R</button>');
-    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="forward">F</button>');
+    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="reverse">Reverse</button>');
+    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="forward">Forward</button>');
 
     //replace button content with images
     document.querySelector('#reverse').insertAdjacentHTML('beforeend',"<img src='img/reverse.png'>")
     document.querySelector('#forward').insertAdjacentHTML('beforeend',"<img src='img/forward.png'>")
 };
+document.querySelectorAll('.step').forEach(function(step){
+    step.addEventListener("click", function(){
+        var index = document.querySelector('.range-slider').value;
 
+        //Step 6: increment or decrement depending on button clicked
+        if (step.id == 'forward'){
+            index++;
+            //Step 7: if past the last attribute, wrap around to first attribute
+            index = index > 6 ? 0 : index;
+        } else if (step.id == 'reverse'){
+            index--;
+            //Step 7: if past the first attribute, wrap around to last attribute
+            index = index < 0 ? 6 : index;
+        };
+
+        //Step 8: update slider
+        document.querySelector('.range-slider').value = index;
+    })
+})
+        //Called in both step button and slider event listener handlers
+        //Step 9: pass new attribute to update symbols
+        updatePropSymbols(attributes[index]);
+        
 function getData(map){
     //load the data
     fetch("data/MegaCities.geojson")

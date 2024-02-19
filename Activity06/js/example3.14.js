@@ -3,6 +3,7 @@ var map;
 var minValue;
 
 function createMap(){
+
     //create the map
     map = L.map('map', {
         center: [0, 0],
@@ -128,13 +129,28 @@ function createSequenceControls(){
     document.querySelector(".range-slider").step = 1;
 
     //add step buttons
-    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="reverse">R</button>');
-    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="forward">F</button>');
+    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="reverse">Reverse</button>');
+    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="forward">Forward</button>');
 
     //replace button content with images
     document.querySelector('#reverse').insertAdjacentHTML('beforeend',"<img src='img/reverse.png'>")
     document.querySelector('#forward').insertAdjacentHTML('beforeend',"<img src='img/forward.png'>")
 };
+    //Below Example 3.6 in createSequenceControls()
+    //Step 5: click listener for buttons
+    document.querySelectorAll('.step').forEach(function(step){
+        step.addEventListener("click", function(){
+            //sequence
+        })
+    })
+
+    //Step 5: input listener for slider
+    document.querySelector('.range-slider').addEventListener('input', function(){            
+        //sequence
+            //Step 6: get the new index value
+            var index = this.value;
+            console.log(index)
+    });
 
 function getData(map){
     //load the data
