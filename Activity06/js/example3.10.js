@@ -128,8 +128,8 @@ function createSequenceControls(){
     document.querySelector(".range-slider").step = 1;
 
     //add step buttons
-    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="reverse">Reverse</button>');
-    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="forward">Forward</button>');
+    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="reverse">R</button>');
+    document.querySelector('#panel').insertAdjacentHTML('beforeend','<button class="step" id="forward">F</button>');
 
     //replace button content with images
     document.querySelector('#reverse').insertAdjacentHTML('beforeend',"<img src='img/reverse.png'>")
