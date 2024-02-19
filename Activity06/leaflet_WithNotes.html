@@ -2,14 +2,17 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="">
+        <link rel="stylesheet" href="mystyle.css">
+    </script>
     <style>
-        #map {position: absolute; top: 0; bottom: 0; height:80%; width: 80%;}
-        <!-- "#map can also be set relative, #map{position: relative; height: 180px; width: 600px;}-->
+       #map {position: absolute; top: 0; bottom: 0; height:80%; width: 80%;} CSS uses different coments*/
+        /*#map{position: relative; height: 500px; width: 600px;} */
         <!-- #map-container {position: relative; height: 180px; width: 600px;} -->
         <!-- Note that this style container CAN be set below div, where DIV is going to push the Leaflet map to the bottom.-->
         <!-- EXAMPLE:   "https://plnkr.co/edit/qjIAiud3aUF11iQPDKj0?p=preview&preview"-->
-
+    
+        <!-- External css is BELOW leaflet.css, contained IN THE HEAD element-->
 
 
     </style>
@@ -21,7 +24,7 @@
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
         }).addTo(map);
-        var marker = L.marker([51.5, -0.09]).addTo(map);
+
 
     </script>
 </body>

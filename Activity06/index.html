@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
             <title></title>
+        <script>#map {position: absolute; top: 0; bottom: 0; left: 0; right: 0;}</script>
 
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
             integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -11,36 +12,21 @@
         <!-- Make sure you put this AFTER Leaflet's CSS -->
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin="">
-        </script>
-        <link rel="stylesheet" href="css/leaflet.css"/>             
+        crossorigin=""></script>
+        <link href="css/style.css" rel="stylesheet" />
+
+         
     </head>
-<!-- style css script reference is not connecting to folder but works here-->
-<style>
-    #map {
-        width: 80%;
-        height: 500px;
-        display: inline-block;
-    }
-    #panel {    
-        width: 16%;    
-        padding: 20px;
-        display: inline-block;
-        vertical-align: top;
-        text-align: center;
-        line-height: 42px;
-    } 
-</style>
+    <style>
 
-<style><link rel="stylesheet" href="style.css" /></style>
 
-<body>
-    <div id="map"></div>
-    <div id="panel"></div>
+    </style>
 
-    <script type="text/javascript" src="js/leaflet.js"></script>
-    <script type="text/javascript" src="js/main02.1.js"></script>
-    <script type="text/javascript" src="js/example3.19.js"></script>
-   
-</body>
+    <body>
+        <div id="map"></div>
+        <div id="panel"></div>
+        <script type="text/javascript" src="js/leaflet.js"></script>
+        <script type="text/javascript" src="js/example3.10.js"></script>
+       
+    </body>
 </html>
